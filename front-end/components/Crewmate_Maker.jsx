@@ -35,7 +35,7 @@ const CrewmateMaker = () => {
           setColor={setColor}
         />
       </div>
-      <button onClick={createPost} className="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600 w-48 text-center text-2xl">Create Crewmate</button>
+      <button onClick={createPost} className="mt-4 bg-[#5B5858] text-white p-2 rounded hover:bg-[#1F1F1F] w-48 text-center text-2xl">Create Crewmate</button>
     </div>
   );
 };

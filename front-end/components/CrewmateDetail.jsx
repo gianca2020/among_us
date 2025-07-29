@@ -26,10 +26,10 @@ const CrewmateDetail = () => {
   if (!crewmate) return <div className="text-white">Crewmate not found.</div>;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#1E1E1E] p-4">
+    <div className="flex flex-col items-center justify-center p-4">
       <CrewmateDescription crewmate={crewmate} />
       <button
-        className="mt-6 bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600"
+        className="mt-6 bg-[#1F1F1F] text-white px-4 py-2 rounded hover:bg-[#2E2E2E]"
         onClick={() => navigate(`/crewmate/${id}/edit`)}
       >
         Edit Information

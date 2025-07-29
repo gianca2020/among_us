@@ -46,16 +46,16 @@ const CrewmateEdit = () => {
   if (loading) return <div className="text-white">Loading...</div>;
 
   return (
-    <form onSubmit={handleUpdate} className="flex flex-col items-center justify-center min-h-screen bg-[#1E1E1E] p-4 text-white">
-      <div className="bg-gray-800 p-6 rounded-lg w-full max-w-md flex flex-col gap-4">
+    <form onSubmit={handleUpdate} className="flex flex-col items-center justify-center min-h-screen p-4 text-white">
+      <div className="bg-[#1E1E1E] p-6 rounded-lg w-full max-w-md flex flex-col gap-4">
         <h2 className="text-2xl font-bold mb-2">Edit Crewmate</h2>
         <label className="flex flex-col gap-1">
           Name:
-          <input value={name} onChange={e => setName(e.target.value)} className="p-2 rounded bg-gray-900 text-white" required />
+          <input value={name} onChange={e => setName(e.target.value)} className="p-2 rounded bg-[#2E2E2E] text-white" required />
         </label>
         <label className="flex flex-col gap-1">
           Speed (mph):
-          <input value={speed} onChange={e => setSpeed(e.target.value)} className="p-2 rounded bg-gray-900 text-white" required />
+          <input value={speed} onChange={e => setSpeed(e.target.value)} className="p-2 rounded bg-[#2E2E2E] text-white" required />
         </label>
         <label className="flex flex-col gap-1">
           Color:
@@ -68,8 +68,8 @@ const CrewmateEdit = () => {
             ))}
           </div>
         </label>
-        <button type="submit" className="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600 w-full text-center text-xl">Save Changes</button>
-        <button type="button" onClick={() => navigate(`/crewmate/${id}`)} className="mt-2 bg-gray-600 text-white p-2 rounded hover:bg-gray-700 w-full text-center text-md">Cancel</button>
+        <button type="submit" className="mt-4 bg-[#3A3A3A] text-white p-2 rounded hover:bg-[#2E2E2E] w-full text-center text-xl">Save Changes</button>
+        <button type="button" onClick={() => navigate(`/crewmate/${id}`)} className="mt-2 bg-[#3A3A3A] text-white p-2 rounded hover:bg-[#2E2E2E] w-full text-center text-md">Cancel</button>
       </div>
     </form>
   );

@@ -9,7 +9,7 @@ const CrewmateCard = ({ name, setName, speed, setSpeed, color, setColor }) => {
           info={
             <input
               type="text"
-              className="bg-gray-900 text-white p-2 rounded w-full"
+              className="bg-[#2E2E2E] text-white p-2 rounded w-full"
               placeholder="Enter crewmate name"
               value={name}
               onChange={e => setName(e.target.value)}
@@ -21,7 +21,7 @@ const CrewmateCard = ({ name, setName, speed, setSpeed, color, setColor }) => {
           info={
             <input
               type="text"
-              className="bg-gray-900 text-white p-2 rounded w-full"
+              className="bg-[#2E2E2E] text-white p-2 rounded w-full"
               placeholder="Enter speed in mph"
               value={speed}
               onChange={e => setSpeed(e.target.value)}
