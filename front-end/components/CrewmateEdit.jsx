@@ -43,6 +43,21 @@ const CrewmateEdit = () => {
     }
   };
 
+
+  const handleDelete = async () => {
+    if (!window.confirm('Are you sure you want to delete this crewmate?')) return;
+    const { error } = await supabaseClient
+      .from('Crewmate')
+      .delete()
+      .eq('id', id);
+    if (error) {
+      alert('Error deleting crewmate: ' + error.message);
+    } else {
+      alert('Crewmate deleted!');
+      navigate('/gallery');
+    }
+  };
+
   if (loading) return <div className="text-white">Loading...</div>;
 
   return (
@@ -70,6 +85,7 @@ const CrewmateEdit = () => {
         </label>
         <button type="submit" className="mt-4 bg-[#3A3A3A] text-white p-2 rounded hover:bg-[#2E2E2E] w-full text-center text-xl">Save Changes</button>
         <button type="button" onClick={() => navigate(`/crewmate/${id}`)} className="mt-2 bg-[#3A3A3A] text-white p-2 rounded hover:bg-[#2E2E2E] w-full text-center text-md">Cancel</button>
+        <button type="button" onClick={handleDelete} className="mt-2 bg-red-600 text-white p-2 rounded hover:bg-red-700 w-full text-center text-md">Delete Crewmate</button>
       </div>
     </form>
   );
