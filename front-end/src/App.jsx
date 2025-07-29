@@ -3,7 +3,9 @@ import SideBar from '../components/Side-bar'
 import HomePage from '../components/HomePage'
 import CrewmateMaker from '../components/Crewmate_Maker'
 import CrewMate from '../components/CrewmateGallery'
+import CrewmateDetail from '../components/CrewmateDetail'
 import { Routes, Route } from 'react-router-dom'
+import CrewmateEdit from '../components/CrewmateEdit'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/create" element={<CrewmateMaker />} />
           <Route path="/gallery" element={<CrewMate />} />
+          <Route path="/crewmate/:id" element={<CrewmateDetail />} />
+          <Route path="/crewmate/:id/edit" element={<CrewmateEdit />} />
         </Routes>
       </div>
     </div>
